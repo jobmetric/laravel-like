@@ -34,10 +34,7 @@
         "laravel": {
             "providers": [
                 "JobMetric\\Like\\LikeServiceProvider"
-            ],
-            "aliases": {
-                "Like": "JobMetric\\Like\\Facades\\Like"
-            }
+            ]
         }
     },
     "minimum-stability": "stable",
