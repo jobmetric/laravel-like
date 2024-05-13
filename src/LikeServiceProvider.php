@@ -15,7 +15,6 @@ class LikeServiceProvider extends PackageCoreServiceProvider
     {
         $package->name('laravel-like')
             ->hasConfig()
-            ->hasTranslation()
             ->hasMigration();
     }
 }
