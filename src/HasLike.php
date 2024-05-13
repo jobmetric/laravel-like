@@ -4,6 +4,7 @@ namespace JobMetric\Like;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
+use JobMetric\Like\Enums\LikeTypeEnum;
 use JobMetric\Like\Events\LikeForgetEvent;
 use JobMetric\Like\Events\LikeStoredEvent;
 use JobMetric\Like\Events\LikeUpdateEvent;
@@ -190,6 +191,21 @@ trait HasLike
         }
 
         return $this;
+    }
+
+    /**
+     * is liked or disliked by user
+     *
+     * @param int $user_id
+     *
+     * @return LikeTypeEnum|null like, dislike, null
+     */
+    public function isLikedStatusBy(int $user_id): ?LikeTypeEnum
+    {
+        /* @var Like $like */
+        $like = $this->likeOne()->where('user_id', $user_id)->first();
+
+        return $like ? ($like->type ? LikeTypeEnum::LIKE : LikeTypeEnum::DISLIKE) : null;
     }
 
     /**
