@@ -1,3 +1,20 @@
+[contributors-shield]: https://img.shields.io/github/contributors/jobmetric/laravel-like.svg?style=for-the-badge
+[contributors-url]: https://github.com/jobmetric/laravel-like/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jobmetric/laravel-like.svg?style=for-the-badge&label=Fork
+[forks-url]: https://github.com/jobmetric/laravel-like/network/members
+[stars-shield]: https://img.shields.io/github/stars/jobmetric/laravel-like.svg?style=for-the-badge
+[stars-url]: https://github.com/jobmetric/laravel-like/stargazers
+[license-shield]: https://img.shields.io/github/license/jobmetric/laravel-like.svg?style=for-the-badge
+[license-url]: https://github.com/jobmetric/laravel-like/blob/master/LICENCE.md
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/majidmohammadian
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # Like for laravel
 
 This is a like management package for Laravel that you can use in your projects.
@@ -149,3 +166,7 @@ forget likes or dislikes
 ```php
 $post->forgetLikes();
 ```
+
+## License
+
+The MIT License (MIT). Please see [License File](https://github.com/jobmetric/laravel-like/blob/master/README.md) for more information.
