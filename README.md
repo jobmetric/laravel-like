@@ -41,7 +41,6 @@ class Post extends Model
 You can now use the `HasLike` class for your model. The following example shows how to create a new post with a like:
 
 ```php
-
 $post = Post::create([
     'status' => 'published',
 ]);
