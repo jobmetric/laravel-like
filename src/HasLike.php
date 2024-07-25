@@ -150,7 +150,7 @@ trait HasLike
      *
      * @return static
      */
-    public function withLikeCount(): static
+    public function loadLikeDislikeCount(): static
     {
         $this->loadCount(['likeTo as like_count', 'dislikeTo as dislike_count']);
 
@@ -164,7 +164,7 @@ trait HasLike
      *
      * @return static
      */
-    public function withLike(bool $type = true): static
+    public function loadLikeDislike(bool $type = true): static
     {
         if ($type) {
             $this->load('likeTo');
@@ -182,7 +182,7 @@ trait HasLike
      *
      * @return static
      */
-    public function withLikes(bool $type = true): static
+    public function loadLikesDislikes(bool $type = true): static
     {
         if ($type) {
             $this->load('likesTo');
@@ -200,7 +200,7 @@ trait HasLike
      *
      * @return LikeTypeEnum|null like, dislike, null
      */
-    public function isLikedStatusBy(int $user_id): ?LikeTypeEnum
+    public function isLikedDislikedBy(int $user_id): ?LikeTypeEnum
     {
         /* @var Like $like */
         $like = $this->likeOne()->where('user_id', $user_id)->first();

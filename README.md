@@ -115,32 +115,32 @@ get count of likes
 
 get count of dislikes
 
-#### withLikeCount
+#### loadLikeDislikeCount
 
 This function helps to see the number of likes and dislikes of each object and loads it in the desired model.
 
 ```php
-$post->withLikeCount();
+$post->loadLikeDislikeCount();
 ```
 
-#### withLike
+#### loadLikeDislike
 
 load like or disLike after model loaded
 
-> The `withLike` function is used to load the likes and dislikes of the object after the model is loaded.
+> The `loadLikeDislike` function is used to load the likes and dislikes of the object after the model is loaded.
 
-#### withLikes
+#### loadLikesDislikes
 
 load likes or dislikes after model loaded
 
-> The `withLikes` function is used to load the likes and dislikes of the object after the model is loaded.
+> The `loadLikesDislikes` function is used to load the likes and dislikes of the object after the model is loaded.
 
-#### isLikedStatusBy
+#### isLikedDislikedBy
 
 is liked or disliked by user
 
 ```php
-$type = $post->isLikedStatusBy($user_id);
+$type = $post->isLikedDislikedBy($user_id);
 
 if(\JobMetric\Like\Enums\LikeTypeEnum::LIKE == $type) {
     // liked
@@ -167,6 +167,10 @@ forget likes or dislikes
 $post->forgetLikes();
 ```
 
+## Contributing
+
+Thank you for considering contributing to the Laravel Like! The contribution guide can be found in the [CONTRIBUTING.md](https://github.com/jobmetric/laravel-like/blob/master/CONTRIBUTING.md).
+
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/jobmetric/laravel-like/blob/master/README.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/jobmetric/laravel-like/blob/master/LICENCE.md) for more information.
