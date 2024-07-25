@@ -26,9 +26,9 @@ return new class extends Migration {
              * true:  like
              * false: dislike
              */
-        });
 
-        cache()->forget('likes');
+            $table->dateTime('created_at');
+        });
     }
 
     /**
@@ -39,7 +39,5 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::dropIfExists(config('like.tables.like'));
-
-        cache()->forget('likes');
     }
 };
